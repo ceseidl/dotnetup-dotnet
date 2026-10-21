@@ -5,8 +5,9 @@ $cases = Join-Path $PSScriptRoot '..\cases'
 
 foreach ($dir in Get-ChildItem $cases -Directory) {
     $file = Join-Path $dir.FullName 'global.json'
-    $json = (Get-Content $file -Raw) -replace '\s', ''
-    Write-Host "[$($dir.Name)] $json"
+    $sdk = (Get-Content $file -Raw | ConvertFrom-Json).sdk
+    Write-Host "[$($dir.Name)] version=$($sdk.version)" `
+        "rollForward=$($sdk.rollForward)"
 
     Push-Location $dir.FullName
     $out = & dotnet --version 2>&1 | Out-String
