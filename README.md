@@ -38,13 +38,13 @@ pwsh scripts/run-cases.ps1
 On a machine with SDKs 8.0.426 and 10.0.402 (no SDK 9):
 
 ```
-[1-pin-exact] {"sdk":{"version":"8.0.426","rollForward":"disable"}}
+[1-pin-exact] version=8.0.426 rollForward=disable
   exit=0
   8.0.426
-[2-roll-feature] {"sdk":{"version":"10.0.100","rollForward":"latestFeature"}}
+[2-roll-feature] version=10.0.100 rollForward=latestFeature
   exit=0
   10.0.402
-[3-missing-sdk] {"sdk":{"version":"9.0.100","rollForward":"disable"}}
+[3-missing-sdk] version=9.0.100 rollForward=disable
   exit=155
   A compatible .NET SDK was not found.
 ```
