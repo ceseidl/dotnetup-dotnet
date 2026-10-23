@@ -1,5 +1,7 @@
 # dotnetup and global.json: which SDK does dotnet pick?
 
+Full article: <https://ceseidl.com.br/en/artigos/dotnetup-sdks-runtimes/>
+
 English | [Português](README.pt-BR.md)
 
 > **Quick start**
